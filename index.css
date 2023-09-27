@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;  
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+   
+    font-size: 100%;
+}
+
+.heading {
+    position: relative;
+    font-size: 100px;
+    background: -webkit-linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight:bolder;
+    
+    margin-bottom: 10px;
+}
+
+
+.grid_container {
+    position: relative;
+    width:  40vw;
+    height: 80vh;
+
+    display: grid;
+    grid-template-rows:    repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+    font-size: 60px;
+    font-weight: bolder;
+
+   
+}
+
+.grid_container li {
+    
+    width:  100%;
+    height: 100%;
+   
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-size: 1em;
+   /* border radius to make circle */
+
+   border-radius: 80px;
+
+
+}
+
+.c0 {
+    color: white;
+    background: #53cee4d5;
+}
+
+.c2 {
+    color: white;
+    background: rgb(87, 132, 175);
+  
+
+}
+
+.c4{
+    color:black;
+    background: rgba(247, 247, 51, 0.87);
+}
+.c8{
+
+    color:black;
+    background: rgba(255, 166, 0, 0.76)
+}
+
+
+.c16 {
+    color: white;
+    background:#468B97;
+}
+
+.c32 {
+    color: white;
+    background: #AAC8A7;
+}
+
+.c64 {
+    color: white;
+    background: rgb(248, 63, 63);
+}
+
+.c128 {
+
+    color: black;
+    background: rgb(141, 141, 248);
+}
+
+.c256 {
+    color: whitesmoke;
+    background: #353535;
+}
+
+.c512 {
+    color: white;
+    background: #e4dbdb;
+}
+
+.c1024 {
+    color: black;
+    background: #9e9fa0;
+}
+
+.c2048 {
+    color:white;
+    background: #000000;
+}
+#game_over{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 200px;
+    font-weight: bolder;
+    color:black;
+    text-shadow: white 0px 0px 10px;
+    
+}
+.restart_btn{
+    position: relative;
+    margin-top: 100px;
+    width: 150px;
+    height: 50px;
+    background:  black;
+    font-size: 20px; 
+    color: white;
+    font-weight: bolder;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 12px 12px 51px#64009b ;
+}
+.restart_btn:hover{
+    background: rgba(0,0,0,0.3);
+    color: blue;
+}
+
