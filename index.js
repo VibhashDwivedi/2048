@@ -1,4 +1,25 @@
 
+var myElement = document.getElementById('mobilewrap');
+var hammertime = new Hammer(myElement);
+hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+hammertime.on('swipeleft', function(ev) {
+  keypress(37);
+});
+
+hammertime.on('swiperight', function(ev) {
+  keypress(39);
+});
+
+hammertime.on('swipeup', function(ev) {
+  keypress(38);
+});
+
+hammertime.on('swipedown', function(ev) {
+  keypress(40);
+});
+
+
 
 // this function will perform actions when keypressing happens 
 function keypress(e){
