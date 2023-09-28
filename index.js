@@ -345,7 +345,41 @@ function fill_board_canvas(grid_board,n){
         game_over.appendChild(result)
         result.innerHTML = `Game Over`
         document.getElementById("ul_grid").style.display="none"
+        // document.getElementById("result").style.display="block"
+        // document.getElementById("result").appendChild(btn)
+        document.getElementById("restart-button").style.display="none"
         result.appendChild(btn)
          
     }
 }
+
+
+
+
+// make restart button at bottom of grids
+let btn1 =document.getElementById("restart-button")
+
+btn1.setAttribute('onclick',"reload_game()")
+
+//calculate score
+
+//restrict window movement using keyboard
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
+
+
+
+
+
+
+
+
+
+
+
+
