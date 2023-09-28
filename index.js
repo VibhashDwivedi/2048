@@ -1,3 +1,11 @@
+const play_audio = (path)=>{
+    let audio = new Audio(path)
+    audio.volume=0.5
+    audio.play() 
+}
+
+
+
 
 // this function will perform actions when swiping happens
 function swipedetect(el, callback){
@@ -54,15 +62,19 @@ var el = document.getElementById('ul_grid')
 swipedetect(el, function(swipedir){
     // swipedir contains either "none", "left", "right", "top", or "down"
     if(swipedir =='left'){
+        play_audio("sound/move.wav")
         left()
     }
     else if(swipedir =='right'){
+        play_audio("sound/move.wav")
         right()
     }
     else if(swipedir =='up'){
+        play_audio("sound/move.wav")
         up()
     }
     else if(swipedir =='down'){
+        play_audio("sound/move.wav")
         down()
     }
 })
@@ -74,19 +86,19 @@ swipedetect(el, function(swipedir){
 function keypress(e){
 
         if(e.keyCode === 37){
-           
+            play_audio("sound/move.wav")
             left()
         }
         else if(e.keyCode === 38){
-           
+            play_audio("sound/move.wav")
             up()
         }
         else if(e.keyCode === 39){
-            
+            play_audio("sound/move.wav")
             right()
         }
         else if(e.keyCode === 40){
-           
+            play_audio("sound/move.wav")
             down()  
         }
 }
@@ -123,6 +135,7 @@ function generat_random(grid,n){
 function is_2048(grid,n){
     for(let i=0;i<n*n;i++){
         if (grid[i]===2048){
+            play_audio("sound/win.wav")
             return "You Win The Game"
         }
     }
@@ -130,7 +143,7 @@ function is_2048(grid,n){
 
 // this function performs action when user presses right for row
 function combine_row_right(grid,n){
-    
+    play_audio("sound/add.wav")
     for(let i=0;i<n*n -1 ;i++){
         if(grid[i] == grid[i+1]){
             let total = parseInt(grid[i]) + parseInt(grid[i+1])
@@ -143,7 +156,7 @@ function combine_row_right(grid,n){
 }
 // this function performs action when user presses left for row
 function combine_row_left(grid,n){
-   
+    play_audio("sound/add.wav")
     for(let i=0;i<n*n -1 ;i++){
         if(grid[i] == grid[i+1]){
             let total = parseInt(grid[i]) + parseInt(grid[i+1])
@@ -158,7 +171,7 @@ function combine_row_left(grid,n){
 
 // this function performs action when user presses right for column
 function combine_col_right(grid,n){
-   
+    play_audio("sound/add.wav")
     for(let i=0;i<n*n - n ;i++){
         if(grid[i] == grid[i+n]){
             let total = parseInt(grid[i]) + parseInt(grid[i+n])
@@ -172,7 +185,7 @@ function combine_col_right(grid,n){
 }
 // this function performs action when user presses left for column
 function combine_col_left(grid,n){
-    
+    play_audio("sound/add.wav")
     for(let i=0;i<n*n -n ;i++){
         if(grid[i] == grid[i+n]){
             let total = parseInt(grid[i]) + parseInt(grid[i+n])
@@ -331,7 +344,7 @@ function fill_board_canvas(grid_board,n){
         document.getElementById("ul_grid").innerHTML=li
     }
     else{
-      
+        play_audio("sound/lose.wav")
         let btn =document.createElement('button')
         btn.innerHTML="RESTART"
         btn.setAttribute('onclick',"reload_game()")
@@ -349,6 +362,14 @@ function fill_board_canvas(grid_board,n){
         // document.getElementById("result").appendChild(btn)
         document.getElementById("restart-button").style.display="none"
         result.appendChild(btn)
+        ScrollReveal().reveal(btn, { delay: 500 });
+        ScrollReveal().reveal(game_over, { delay: 500 ,
+        origin: 'bottom',
+        distance: '100px',
+        opacity: 0,
+        
+
+        });
          
     }
 }
@@ -361,7 +382,6 @@ let btn1 =document.getElementById("restart-button")
 
 btn1.setAttribute('onclick',"reload_game()")
 
-//calculate score
 
 //restrict window movement using keyboard
 window.addEventListener("keydown", function(e) {
@@ -370,6 +390,10 @@ window.addEventListener("keydown", function(e) {
         e.preventDefault();
     }
 }, false);
+
+
+
+
 
 
 

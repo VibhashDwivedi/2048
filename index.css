@@ -16,6 +16,8 @@ body {
     
    
     font-size: 100%;
+    
+ 
 }
 
 .heading {
@@ -43,10 +45,7 @@ body {
     gap: 22px;
     font-size: 60px;
     font-weight: bolder;
-    transform-origin: center center;
    
-       
-
 
    
 }
@@ -66,6 +65,13 @@ body {
    /* border radius to make circle */
 
    border-radius: 80px;
+
+   /* 3d effect */
+  
+box-shadow: 0px 5px 0px #a09696;
+   
+
+   
 
 
 }
@@ -227,7 +233,7 @@ body {
         display: grid;
         grid-template-rows:    repeat(4,1fr);
         grid-template-columns: repeat(4,1fr);
-        gap: 5px;
+        gap: 10px;
         font-size: 35px;
         
         /* top: 100px; */
@@ -267,7 +273,7 @@ body {
         height: 50px;
         background:  black;
         font-size: 20px;
-        left: -20px; 
+        left: 2px; 
         color: white;
         font-weight: bolder;
         border:none;
@@ -278,7 +284,7 @@ body {
 
     .restart_btn1{
         position: relative;
-        margin-top: 80px;
+        margin-top: 100px;
         width: 150px;
         height: 50px;
         background:  black;

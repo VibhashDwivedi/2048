@@ -34,4 +34,22 @@
 </body>
 
 <script src="index.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    ScrollReveal().reveal('.heading',
+     { delay: 500, 
+        origin:'top',
+        distance:'100px',
+        opacity:'0',
+    }
+     );
+    ScrollReveal().reveal('.grid_container', { delay: 500 ,
+        origin: 'bottom',
+        distance:'100px',
+        opacity:'0',
+    
+    });
+   
+    ScrollReveal().reveal('.restart_btn1', { delay: 500 });
+</script>
 </html>
