@@ -1,6 +1,9 @@
 # 2048
 Popular game 2048 built using html, css, js
 
+Responsive desgin
+Works on Mobile as well
+
 [Live Demo](https://2048-vibhashdwivedi.vercel.app/)
 
 # Screenshots
